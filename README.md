@@ -5,7 +5,7 @@
 
  Create a json file called config.json and paste it in like this:
 
- {
+{
 	"prefix": "prefixGoesHere (examples: !, r!, -, _)",
 	"token": "tokenGoesHere"
 }
