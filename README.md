@@ -9,7 +9,8 @@
 {
 	"prefix": "prefixGoesHere (examples: !, r!, -, _)",
 	"token": "tokenGoesHere"
-}```
+}
+```
 
 **Run the Bot with:**
 `node .`
