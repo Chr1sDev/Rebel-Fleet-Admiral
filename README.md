@@ -1,9 +1,9 @@
 # Rebel Fleet Admiral
  Discord bot for [Rebel Grenades](https://discord.gg/wDUgCrE)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 [![license](https://img.shields.io/github/license/fox-cat/coward)](LICENSE)
-[![chat](https://img.shields.io/discord/586736904771469313?style=flat)](https://discord.gg/wDUgCrE)
+[![chat](https://img.shields.io/discord/586736904771469313?style=flat-square)](https://discord.gg/wDUgCrE)
 
 
 ## Setup
