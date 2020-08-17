@@ -5,9 +5,12 @@
 [![license](https://img.shields.io/github/license/fox-cat/coward)](LICENSE)
 [![chat](https://img.shields.io/discord/586736904771469313?style=flat)](https://discord.gg/wDUgCrE)
 
- This does not include the token, which you will need to add manually from the discord developer panel
 
- Create a json file called config.json and paste it in like this:
+## Setup
+
+This does not include the token, which you will need to add manually from the discord developer panel
+
+Create a json file called config.json and paste it in like this:
 
 ```json
 {
@@ -15,6 +18,8 @@
 	"token": "tokenGoesHere"
 }
 ```
+
+## Starting
 
 **Run the Bot with:**
 `node .`
