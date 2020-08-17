@@ -5,6 +5,7 @@
   "main": "RFA.js",
   "dependencies": {
     "discord.js": "12.3.1",
+    "ffmpeg-static": "^4.2.7",
     "node-fetch": "2.6.0",
     "xmlhttprequest": "1.8.0"
   },
