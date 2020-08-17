@@ -4,6 +4,7 @@
   "description": "discord bot",
   "main": "RFA.js",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "discord.js": "12.3.1",
     "ffmpeg-static": "^4.2.7",
     "node-fetch": "2.6.0",
