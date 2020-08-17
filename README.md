@@ -19,7 +19,7 @@ Create a json file called config.json and paste it in like this:
 }
 ```
 
-##### Dependencies
+#### Dependencies
 
 run `npm i` in the bot directory to install dependencies
 
