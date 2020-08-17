@@ -2,7 +2,7 @@
  Discord bot for [Rebel Grenades](https://discord.gg/wDUgCrE)
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-[![license](https://img.shields.io/github/license/fox-cat/coward)](LICENSE)
+[![license](https://img.shields.io/github/license/Chr1sDev/rebel-fleet-admiral?style=flat-square)](LICENSE)
 [![chat](https://img.shields.io/discord/586736904771469313?style=flat-square)](https://discord.gg/wDUgCrE)
 
 
