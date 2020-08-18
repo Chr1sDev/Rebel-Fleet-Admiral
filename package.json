@@ -9,7 +9,8 @@
     "ffmpeg-static": "^4.2.7",
     "node-fetch": "2.6.0",
     "xmlhttprequest": "1.8.0",
-    "ytdl-core-discord": "^1.2.1"
+    "ytdl-core-discord": "^1.2.1",
+    "ytsearcher": "^1.2.2"
   },
   "devDependencies": {},
   "scripts": {
