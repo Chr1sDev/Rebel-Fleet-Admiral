@@ -69,6 +69,38 @@ client.on('message', msg => {
 });
 
 
+client.on('message', async voice => {
+  // Join the same voice channel of the author of the message
+  if (voice.content == `${prefix}play`) {
+	  if (voice.member.voice.channel) {
+      const connection = await voice.member.voice.channel.join();
+      
+      const fs = require('fs');
+      const ytdl = require('ytdl-core-discord');
+    
+      // Create a dispatcher
+      //const dispatcher = connection.play('https://www.youtube.com/watch?v=xGtyOPC3mEA'); , { quality: 'highestaudio' }
+      const dispatcher = connection.play(await ytdl('https://www.youtube.com/watch?v=xGtyOPC3mEA'), { type: 'opus' }, {quality: 'lowest' });
+      //https://www.youtube.com/watch?v=HRW9W7ZtOEI
+      //const dispatcher = connection.play(await ytdl('https://www.youtube.com/watch?v=HRW9W7ZtOEI'), { type: 'opus' }, {quality: 'lowest' });
+
+      dispatcher.on('start', () => {
+	      voice.channel.send('Song is now playing!');
+      });
+
+      dispatcher.on('finish', () => {
+        voice.channel.send('Song has finished playing!');
+        connection.disconnect();
+      });
+
+      // Always remember to handle errors appropriately!
+      dispatcher.on('error', console.error);
+
+    }
+
+  }
+
+});
 
   client.login(token)
 
