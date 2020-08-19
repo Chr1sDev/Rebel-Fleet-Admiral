@@ -73,12 +73,11 @@ client.on('message', async voice => {
 
 
 if (voice.content.includes(`${prefix}play`)) {
-  
-  const connection = await voice.member.voice.channel.join();
 
   // Join the same voice channel of the author of the message
   if (voice.member.voice.channel) {
     //const connection = await voice.member.voice.channel.join();
+    const connection = await voice.member.voice.channel.join();
 
     const fs = require('fs');
     const ytdl = require('ytdl-core-discord');
