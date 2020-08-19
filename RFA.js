@@ -85,7 +85,7 @@ if (voice.content.includes(`${prefix}play`)) {
     const { apiurl } = require('ytsearcher');
 
     const { YTSearcher } = require('ytsearcher');
-    const searcher = new YTSearcher('AIzaSyCzjSsPUu9d1el4Aq5njMIZ4qcR6xwrpOA');
+    const searcher = new YTSearcher('AIzaSyD17RIpNF723buQZ9gsdOWDoq4BGpHDIb0');
 
     var input = voice.content;
     var usrInput = input.substr('6');
