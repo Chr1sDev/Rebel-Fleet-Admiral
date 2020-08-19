@@ -16,7 +16,7 @@ module.exports = {
 
                 if (amountNum !== NaN) {
                     
-                    if (amountNum >= 1 && amountNum <= 100) {
+                    if (amountNum >= 1 && amountNum <= 99) {
                         
                             msg.channel.messages.fetch()
                             .then(function(){
@@ -24,11 +24,11 @@ module.exports = {
                             }, function(err){msg.channel.send("\**Error:\** error clearing channel.")})                        
 
                     } else {
-                        msg.channel.send(`\**Error:\** Amount must be a whole number from 1-100!`);
+                        msg.channel.send(`\**Error:\** Amount must be a whole number from 1-99!`);
                     }
 
                 } else {
-                    msg.channel.send(`\**Error:\** Amount must be a whole number from 1-100!`);
+                    msg.channel.send(`\**Error:\** Amount must be a whole number from 1-99!`);
                 }
 
             } else {

@@ -71,41 +71,50 @@ client.on('message', msg => {
 
 client.on('message', async voice => {
 
+
+if (voice.content.includes(`${prefix}play`)) {
+  
+  const connection = await voice.member.voice.channel.join();
+
   // Join the same voice channel of the author of the message
-  if (voice.content.includes(`${prefix}play`)) {
-	  if (voice.member.voice.channel) {
-      const connection = await voice.member.voice.channel.join();
-      
-      const fs = require('fs');
-      const ytdl = require('ytdl-core-discord');
+  if (voice.member.voice.channel) {
+    //const connection = await voice.member.voice.channel.join();
 
-      const { apiurl } = require('ytsearcher');
+    const fs = require('fs');
+    const ytdl = require('ytdl-core-discord');
 
-      const { YTSearcher } = require('ytsearcher');
-      const searcher = new YTSearcher('AIzaSyAvFzxIPtrBdOPe5YIEGohywE4EEDLVQwU');
+    const { apiurl } = require('ytsearcher');
 
-      var input = voice.content;
-      var usrInput = input.substr('6');
-      let result = await searcher.search(usrInput);
+    const { YTSearcher } = require('ytsearcher');
+    const searcher = new YTSearcher('AIzaSyAvFzxIPtrBdOPe5YIEGohywE4EEDLVQwU');
 
-      // Create a dispatcher
-      const dispatcher = connection.play(await ytdl(result.first.url), { type: 'opus' }, {quality: 'lowest' });
+    var input = voice.content;
+    var usrInput = input.substr('6');
+    let result = await searcher.search(usrInput);
+    //voice.channel.send(usrInput + '\n' + result.first.url);
 
-      dispatcher.on('start', () => {
-	      voice.channel.send('Now playing ' + result.first.url);
-      });
+    // Create a dispatcher
 
-      dispatcher.on('finish', () => {
-        voice.channel.send('Song has finished playing!');
+    //const dispatcher = connection.play('https://www.youtube.com/watch?v=xGtyOPC3mEA'); , { quality: 'highestaudio' }
+    //const dispatcher = connection.play(await ytdl('https://www.youtube.com/watch?v=xGtyOPC3mEA'), { type: 'opus' }, {quality: 'lowest' });
+    //https://www.youtube.com/watch?v=HRW9W7ZtOEI
+    //const dispatcher = connection.play(await ytdl('https://www.youtube.com/watch?v=HRW9W7ZtOEI'), { type: 'opus' }, {quality: 'lowest' });
+    const dispatcher = connection.play(await ytdl(result.first.url), { type: 'opus' }, {quality: 'lowest' });
+
+    dispatcher.on('start', () => {
+        voice.channel.send('Now playing ' + result.first.url);
+    });
+
+    dispatcher.on('finish', () => {
+        //voice.channel.send('Song has finished playing!');
         connection.disconnect();
-      });
+    });
 
-      // Always remember to handle errors appropriately!
-      dispatcher.on('error', console.error);
+    // Always remember to handle errors appropriately!
+    dispatcher.on('error', console.error);
 
     }
-
-  }
+}
 
 });
 
