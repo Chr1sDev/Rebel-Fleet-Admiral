@@ -3,6 +3,6 @@ module.exports = {
 	description: '',
 	execute(msg, args) {
 		// Send the user's avatar URL
-        msg.reply(msg.author.displayAvatarURL());
+		msg.channel.send(msg.author.displayAvatarURL());
 	},
 };
