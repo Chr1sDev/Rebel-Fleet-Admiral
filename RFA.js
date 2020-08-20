@@ -98,7 +98,7 @@ if (voice.content.includes(`${prefix}play`)) {
     //const dispatcher = connection.play(await ytdl('https://www.youtube.com/watch?v=xGtyOPC3mEA'), { type: 'opus' }, {quality: 'lowest' });
     //https://www.youtube.com/watch?v=HRW9W7ZtOEI
     //const dispatcher = connection.play(await ytdl('https://www.youtube.com/watch?v=HRW9W7ZtOEI'), { type: 'opus' }, {quality: 'lowest' });
-    const dispatcher = connection.play(await ytdl(result.first.url), { type: 'opus' }, {quality: 'lowest' });
+    const dispatcher = connection.play(await ytdl(result.first.url), { type: 'opus' }, {quality: 'highest' });
 
     dispatcher.on('start', () => {
         voice.channel.send('Now playing ' + result.first.url);
