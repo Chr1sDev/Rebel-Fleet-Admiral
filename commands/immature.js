@@ -4,7 +4,7 @@ module.exports = {
 	execute(msg, args) {
 
         const user = msg.client.users.cache.get(msg.author.id);
-        user.send("nico-nico-nii");
+        user.send("nico-nico-nii https://www.youtube.com/watch?v=T4iC52d-fVY");
 
         msg.react('👍');
 
