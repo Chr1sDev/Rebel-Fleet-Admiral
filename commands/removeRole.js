@@ -1,12 +1,14 @@
 const { User } = require("discord.js");
 
 module.exports = {
-    name: 'removeRole',
+    name: 'removerole',
     description: '',
     execute(msg, args) {
 
-        //Declare Constants
+        //Declare Constants/Variables
         const muted = '611043295279316992';
+        var input = msg.content;
+        var usrInput = input.substr(11);
 
         //Check to see if msg.author is muted
         if (msg.member.roles.cache.has(muted)) {
@@ -15,7 +17,7 @@ module.exports = {
             
         } else {
 
-            
+
 
         }
 
