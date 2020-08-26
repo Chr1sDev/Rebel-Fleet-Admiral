@@ -62,7 +62,7 @@ client.on('message', msg => {
     console.error(error);
     const user = client.users.cache.get('279032930926592000');
     user.send(`**Crashlog:** \n${error}`);
-	  msg.reply('there was an error trying to execute that command!');
+	  msg.reply(`\**Crashlog:\** ${error}`);
   }
 
 
