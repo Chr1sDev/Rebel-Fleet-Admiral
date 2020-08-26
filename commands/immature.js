@@ -12,6 +12,7 @@ module.exports = {
         const immatureID = `746601135149809684`;
         const immatureMusicID = `615191480067293210`;
 
+        //Checks to see if msg.author has roles already
         if (msg.member.roles.cache.has(immatureID) && msg.member.roles.cache.has(immatureMusicID)) {
 
             msg.channel.send('\**Error:\** User already has mature roles!')
@@ -19,8 +20,8 @@ module.exports = {
         } else {
 
         //DM Matthew and Thomas when command is invoked
-        //matthew.send("\**Mature Role:\** Press on the reaction to confirm role\nThis will timeout in 20 minutes.");
-        //thomas.send("\**Mature Role:\** Press on the reaction to confirm role\nThis will timeout in 20 minutes.");
+        matthew.send("\**Mature Role:\** Press on the reaction to confirm role\nThis will timeout in 20 minutes.");
+        thomas.send("\**Mature Role:\** Press on the reaction to confirm role\nThis will timeout in 20 minutes.");
 
         //reacts with (custom reaction) (must be in the same server that the command is called from)
         const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'monkaS');
