@@ -3,6 +3,7 @@ module.exports = {
 	name: 'help',
 	description: 'Lists all commands',
 	execute(msg, args) {
+        
         const exampleEmbed = new Discord.MessageEmbed()
         .setColor('#00FF86')
         .setTitle('Command List')
