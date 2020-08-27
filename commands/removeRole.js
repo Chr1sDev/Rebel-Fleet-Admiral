@@ -17,7 +17,7 @@ module.exports = {
             
         } else {
 
-
+            console.log(usrInput);
 
         }
 

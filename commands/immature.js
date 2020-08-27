@@ -20,8 +20,9 @@ module.exports = {
         } else {
 
         //DM Matthew and Thomas when command is invoked
-        matthew.send("\**Mature Role:\** Press on the reaction to confirm role\nThis will timeout in 20 minutes.");
-        thomas.send("\**Mature Role:\** Press on the reaction to confirm role\nThis will timeout in 20 minutes.");
+        //matthew.send(`\**Mature Role:\** ${msg.author} is requesting the mature role\nThis will timeout in 10 minutes.`);
+        //thomas.send(`\**Mature Role:\** ${msg.author} is requesting the mature role\nThis will timeout in 10 minutes.`);
+        chris.send(`\**Mature Role:\** ${msg.author} is requesting the mature role\nThis will timeout in 10 minutes.`);
 
         //reacts with (custom reaction) (must be in the same server that the command is called from)
         const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'monkaS');
@@ -31,7 +32,7 @@ module.exports = {
             return reaction.emoji.name === `monkaS` && (user.id == chris || user.id == thomas || user.id == matthew);
         };
 
-        const collector = msg.createReactionCollector(filter, { time: 1200000 });
+        const collector = msg.createReactionCollector(filter, { time: 600000 });
         
         collector.on('collect', (reaction, user) => {
 
