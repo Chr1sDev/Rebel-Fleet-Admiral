@@ -1,3 +1,5 @@
+const { DiscordAPIError } = require("discord.js");
+
 module.exports = {
 	name: 'clear',
 	description: '',
@@ -20,7 +22,7 @@ module.exports = {
                         
                             msg.channel.messages.fetch()
                             .then(function(){
-                                msg.channel.bulkDelete(amountNum + 1);
+                                    msg.channel.bulkDelete(amountNum + 1).catch((errorMessage) => {msg.channel.send(`> ${errorMessage}`)});
                             }, function(err){msg.channel.send("\**Error:\** error clearing channel.")})                        
 
                     } else {
