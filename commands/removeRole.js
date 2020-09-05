@@ -63,10 +63,18 @@ module.exports = {
                 } else {
 
                     if (ping.roles.cache.has(pingRole.id)) {
-                        
-                        ping.roles.remove(pingRole.id);
-                        msg.channel.send(`> "\**${pingRole.name}\**" role has been removed`);
 
+                        if (msg.member.hasPermission("MANAGE_ROLES")) {
+                            
+                            ping.roles.remove(pingRole.id);
+                            msg.channel.send(`> "\**${pingRole.name}\**" role has been removed`);
+
+                        } else {
+
+                            msg.channel.send(`> \**Error:\** ${msg.author} does not have permission "Manage Roles"!`);
+
+                        }
+                        
                     } else {
 
                         msg.channel.send(`> \**Error:\** ${ping} doesn't have this role!`);
