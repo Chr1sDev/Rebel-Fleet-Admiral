@@ -52,7 +52,7 @@ module.exports = {
             //Check to see if "ping" is muted
             if (ping.roles.cache.has(muted)) {
 
-                msg.channel.send(`> \**Error:\** You are muted!`);
+                msg.channel.send(`> \**Error:\** ${ping} is muted!`);
             
             } else {
 

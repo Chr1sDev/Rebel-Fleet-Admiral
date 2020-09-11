@@ -23,7 +23,7 @@ module.exports = {
                     ping.roles.remove(role);
                 } else if (reason == "") {
                     msg.channel.send(`${ping} has been unmuted`);
-                    msg.roles.remove(role);
+                    ping.roles.remove(role.id);
                 }
 
             }
