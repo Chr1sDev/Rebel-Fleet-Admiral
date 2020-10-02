@@ -2,7 +2,7 @@
   "name": "rebel_fleet_admiral",
   "version": "2.0.0",
   "description": "discord bot",
-  "main": "RFA.ts",
+  "main": "RFA.js",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
     "discord.js": "12.3.1",
